@@ -17,7 +17,6 @@
 		926CD08123F37A2D000AE3FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926CD07F23F37A2D000AE3FC /* LaunchScreen.storyboard */; };
 		926CD08423F37A2D000AE3FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD08323F37A2D000AE3FC /* main.m */; };
 		926CD09223F37AA5000AE3FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD09123F37AA5000AE3FC /* AppDelegate.m */; };
-		926CD09523F37AA5000AE3FC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD09423F37AA5000AE3FC /* SceneDelegate.m */; };
 		926CD09823F37AA5000AE3FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD09723F37AA5000AE3FC /* ViewController.m */; };
 		926CD09B23F37AA5000AE3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926CD09923F37AA5000AE3FC /* Main.storyboard */; };
 		926CD09D23F37AA6000AE3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926CD09C23F37AA6000AE3FC /* Assets.xcassets */; };
@@ -31,6 +30,7 @@
 		92B2CC7D241091400092CA65 /* InMobiMediationSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD0AC23F38769000AE3FC /* InMobiMediationSDK.framework */; };
 		92B2CC7F241091410092CA65 /* InMobiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD0AB23F38769000AE3FC /* InMobiSDK.framework */; };
 		92B2CC81241091420092CA65 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD0B523F3877E000AE3FC /* WebKit.framework */; };
+		92B2CC852411BB040092CA65 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B2CC832411BB040092CA65 /* SceneDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +52,6 @@
 		926CD08E23F37AA5000AE3FC /* imabmopub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imabmopub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926CD09023F37AA5000AE3FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		926CD09123F37AA5000AE3FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		926CD09323F37AA5000AE3FC /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		926CD09423F37AA5000AE3FC /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		926CD09623F37AA5000AE3FC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		926CD09723F37AA5000AE3FC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		926CD09A23F37AA5000AE3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +70,8 @@
 		926CD0B823F38793000AE3FC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		926CD0BA23F387A6000AE3FC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		92B2CC76241088650092CA65 /* InMobiABMoPubPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InMobiABMoPubPlugin.framework; path = "Pods/InMobiABMoPubPlugin/network-support/MoPub/InMobiABMoPubPlugin.framework"; sourceTree = "<group>"; };
+		92B2CC832411BB040092CA65 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		92B2CC842411BB040092CA65 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		96D8B3221ECCDC0F1A3C36CE /* libPods-inmobi-sample-app-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-inmobi-sample-app-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03CA50E0322D728C9E87576 /* libPods-imabmopub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-imabmopub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE919DC366BA3961A381712 /* Pods-inmobi-sample-app-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inmobi-sample-app-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-inmobi-sample-app-objc/Pods-inmobi-sample-app-objc.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,10 +145,10 @@
 		926CD08F23F37AA5000AE3FC /* imabmopub */ = {
 			isa = PBXGroup;
 			children = (
+				92B2CC842411BB040092CA65 /* SceneDelegate.h */,
+				92B2CC832411BB040092CA65 /* SceneDelegate.m */,
 				926CD09023F37AA5000AE3FC /* AppDelegate.h */,
 				926CD09123F37AA5000AE3FC /* AppDelegate.m */,
-				926CD09323F37AA5000AE3FC /* SceneDelegate.h */,
-				926CD09423F37AA5000AE3FC /* SceneDelegate.m */,
 				926CD09623F37AA5000AE3FC /* ViewController.h */,
 				926CD09723F37AA5000AE3FC /* ViewController.m */,
 				926CD09923F37AA5000AE3FC /* Main.storyboard */,
@@ -403,8 +403,8 @@
 			files = (
 				926CD09823F37AA5000AE3FC /* ViewController.m in Sources */,
 				926CD09223F37AA5000AE3FC /* AppDelegate.m in Sources */,
+				92B2CC852411BB040092CA65 /* SceneDelegate.m in Sources */,
 				926CD0A323F37AA6000AE3FC /* main.m in Sources */,
-				926CD09523F37AA5000AE3FC /* SceneDelegate.m in Sources */,
 				926CD0AA23F38353000AE3FC /* BannerKWController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

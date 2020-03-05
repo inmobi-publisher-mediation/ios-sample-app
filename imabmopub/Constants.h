@@ -20,15 +20,6 @@
 #define kASMRECID @"1068393"
 #define kASInterstitialID @"1064942"
 
-
-// Other Constants
-#define kSupportAB 1
-#define kSupportABwithKW 0
-#define kInitialInterstitialLoadDelay 5
-#define kFailLoadInterstitialDelay 20
-#define kSuccessLoadInterstitialDelay 10
-#define kSelfBannerRefreshTimer 30
-
 #define kLogTag @"IMABTEST: "
 #define kAppName @"Audience Bidder Test"
 

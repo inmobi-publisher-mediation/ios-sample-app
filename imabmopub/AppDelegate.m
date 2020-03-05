@@ -22,9 +22,7 @@
     [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:nil];
     
     [IMSdk setLogLevel:kIMSDKLogLevelDebug];
-
     [IMAudienceBidder initializeWithAppID:kIMABAppID andUserConsent:@{ IM_GDPR_CONSENT_AVAILABLE : @YES }];
-
     
     return YES;
 }
