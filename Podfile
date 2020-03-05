@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'imabmopub' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for imabmopub
+  pod ‘InMobiABMoPubPlugin’
+
+end
+
+target 'inmobi-sample-app-objc' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for inmobi-sample-app-objc
+
+end

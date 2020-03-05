@@ -1,0 +1,43 @@
+PODS:
+  - InMobiABMoPubPlugin (1.0.4.906):
+    - InMobiABMoPubPlugin/InMobiABMoPubPlugin (= 1.0.4.906)
+    - mopub-ios-sdk
+  - InMobiABMoPubPlugin/Core (1.0.4.906):
+    - mopub-ios-sdk
+  - InMobiABMoPubPlugin/InMobiABMoPubPlugin (1.0.4.906):
+    - InMobiABMoPubPlugin/Core
+    - InMobiABMoPubPlugin/Moat
+    - mopub-ios-sdk
+  - InMobiABMoPubPlugin/Moat (1.0.4.906):
+    - InMobiABMoPubPlugin/Core
+    - mopub-ios-sdk
+  - mopub-ios-sdk (5.11.0):
+    - mopub-ios-sdk/MoPubSDK (= 5.11.0)
+  - mopub-ios-sdk/Avid (5.11.0):
+    - mopub-ios-sdk/Core
+  - mopub-ios-sdk/Core (5.11.0)
+  - mopub-ios-sdk/Moat (5.11.0):
+    - mopub-ios-sdk/Core
+  - mopub-ios-sdk/MoPubSDK (5.11.0):
+    - mopub-ios-sdk/Avid
+    - mopub-ios-sdk/Core
+    - mopub-ios-sdk/Moat
+    - mopub-ios-sdk/NativeAds
+  - mopub-ios-sdk/NativeAds (5.11.0):
+    - mopub-ios-sdk/Core
+
+DEPENDENCIES:
+  - InMobiABMoPubPlugin
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - InMobiABMoPubPlugin
+    - mopub-ios-sdk
+
+SPEC CHECKSUMS:
+  InMobiABMoPubPlugin: 95ce2e04c1302d1b96f870f9c7c23fd0178fd473
+  mopub-ios-sdk: 292b8e9a55a2e72a34afc04ec01e85486af46240
+
+PODFILE CHECKSUM: a15ca2083a83a989d1d8d57392b620442e7fd33c
+
+COCOAPODS: 1.5.3
