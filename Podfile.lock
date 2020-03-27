@@ -1,4 +1,5 @@
 PODS:
+  - AppLovinSDK (6.11.6)
   - Google-Mobile-Ads-SDK (7.57.0):
     - GoogleAppMeasurement (~> 6.0)
   - GoogleAppMeasurement (6.3.1):
@@ -64,12 +65,14 @@ PODS:
   - nanopb/encode (0.3.9011)
 
 DEPENDENCIES:
+  - AppLovinSDK
   - Google-Mobile-Ads-SDK
   - InMobiABMoPubPlugin
   - InMobiMediationSDK
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AppLovinSDK
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -79,6 +82,7 @@ SPEC REPOS:
     - nanopb
 
 SPEC CHECKSUMS:
+  AppLovinSDK: 818e22271b3f875c150faf356f65c59463deb653
   Google-Mobile-Ads-SDK: ec897018b9ab9b447e7aa4876e7f75aba13ba2de
   GoogleAppMeasurement: c29d405ff76e18551b5d158eaba6753fda8c7542
   GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
@@ -87,6 +91,6 @@ SPEC CHECKSUMS:
   mopub-ios-sdk: 292b8e9a55a2e72a34afc04ec01e85486af46240
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
 
-PODFILE CHECKSUM: b7754c1ab6b9144151ac101cde26fd4bb55f41cd
+PODFILE CHECKSUM: e290fcb5068d8b2faaeb9e8727b9176033a2771e
 
 COCOAPODS: 1.5.3
