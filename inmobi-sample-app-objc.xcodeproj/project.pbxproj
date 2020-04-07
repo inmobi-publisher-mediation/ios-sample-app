@@ -11,6 +11,8 @@
 		28CD0AA2D25BAA0514278A4A /* libPods-inmobi-sample-app-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D8B3221ECCDC0F1A3C36CE /* libPods-inmobi-sample-app-objc.a */; };
 		7D76CFE443EAE2F6F28F2590 /* libPods-clientSDKMediation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48342893AD685D61B6BA0694 /* libPods-clientSDKMediation.a */; };
 		83005A02C5A2AECCC8CECCE1 /* libPods-imabmopub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A03CA50E0322D728C9E87576 /* libPods-imabmopub.a */; };
+		9209C8FE243D267300DBB0C3 /* MaxTestBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9209C8FD243D267300DBB0C3 /* MaxTestBannerController.m */; };
+		9209C901243D26A200DBB0C3 /* MAxRewardedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9209C900243D26A200DBB0C3 /* MAxRewardedViewController.m */; };
 		926CD07323F37A2B000AE3FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD07223F37A2B000AE3FC /* AppDelegate.m */; };
 		926CD07623F37A2B000AE3FC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD07523F37A2B000AE3FC /* SceneDelegate.m */; };
 		926CD07923F37A2B000AE3FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD07823F37A2B000AE3FC /* ViewController.m */; };
@@ -64,6 +66,10 @@
 		52E1AFFA0CD39EA81E8AFC70 /* Pods-clientSDKMediation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientSDKMediation.release.xcconfig"; path = "Pods/Target Support Files/Pods-clientSDKMediation/Pods-clientSDKMediation.release.xcconfig"; sourceTree = "<group>"; };
 		67BDDAF55A96C7F402D3A1AC /* Pods-imabmopub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imabmopub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imabmopub/Pods-imabmopub.debug.xcconfig"; sourceTree = "<group>"; };
 		6FCD45CC0F604788260D39CE /* libPods-imabmax.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-imabmax.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9209C8FC243D267300DBB0C3 /* MaxTestBannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxTestBannerController.h; sourceTree = "<group>"; };
+		9209C8FD243D267300DBB0C3 /* MaxTestBannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxTestBannerController.m; sourceTree = "<group>"; };
+		9209C8FF243D26A200DBB0C3 /* MAxRewardedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAxRewardedViewController.h; sourceTree = "<group>"; };
+		9209C900243D26A200DBB0C3 /* MAxRewardedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAxRewardedViewController.m; sourceTree = "<group>"; };
 		926CD06E23F37A2B000AE3FC /* inmobi-sample-app-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inmobi-sample-app-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		926CD07123F37A2B000AE3FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		926CD07223F37A2B000AE3FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -254,6 +260,10 @@
 				92DFB957242D5C41007D728D /* ViewController.h */,
 				92DFB958242D5C41007D728D /* ViewController.m */,
 				92DFB95A242D5C41007D728D /* Main.storyboard */,
+				9209C8FF243D26A200DBB0C3 /* MAxRewardedViewController.h */,
+				9209C900243D26A200DBB0C3 /* MAxRewardedViewController.m */,
+				9209C8FC243D267300DBB0C3 /* MaxTestBannerController.h */,
+				9209C8FD243D267300DBB0C3 /* MaxTestBannerController.m */,
 				92DFB968242D5CB2007D728D /* MaxTestViewController.h */,
 				92DFB969242D5CB2007D728D /* MaxTestViewController.m */,
 				92DFB95D242D5C42007D728D /* Assets.xcassets */,
@@ -659,6 +669,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9209C901243D26A200DBB0C3 /* MAxRewardedViewController.m in Sources */,
+				9209C8FE243D267300DBB0C3 /* MaxTestBannerController.m in Sources */,
 				92DFB96A242D5CB2007D728D /* MaxTestViewController.m in Sources */,
 				92DFB959242D5C41007D728D /* ViewController.m in Sources */,
 				92DFB953242D5C41007D728D /* AppDelegate.m in Sources */,

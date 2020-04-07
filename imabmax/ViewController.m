@@ -11,6 +11,8 @@
 
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *maxSDKVersionDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *imSDKVersionDisplay;
 
 @end
 
@@ -21,7 +23,11 @@
     // Do any additional setup after loading the view.
     
     // [self identifierForAdvertising];
+    
+    [self.maxSDKVersionDisplay setText:[ALSdk version]];
 }
+
+
 
 
 - (NSString *)identifierForAdvertising {
@@ -34,6 +40,11 @@
 
     // Get and return IDFA
     return nil;
+}
+
+- (IBAction) myUnwindAction:(UIStoryboardSegue*)unwindSegue {
+ 
+    // do something
 }
 
 
