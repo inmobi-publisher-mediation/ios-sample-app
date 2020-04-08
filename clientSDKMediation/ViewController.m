@@ -66,4 +66,8 @@ NSString *admob_test_int = @"1069146";
   [self.asInterstitialVC showFromViewController:self];
 }
 
+- (UIViewController *)viewControllerForPresentingModalView {
+    return self;
+}
+
 @end
