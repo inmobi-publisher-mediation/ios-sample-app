@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AppLovinSDK/AppLovinSDK.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MAxRewardedViewController : UIViewController
+@interface MAxRewardedViewController : UIViewController <MARewardedAdDelegate>
+
+@property (nonatomic, strong) MARewardedAd *rewardedAd;
+@property (nonatomic, assign) NSInteger retryAttempt;
 
 @end
 

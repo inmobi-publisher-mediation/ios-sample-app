@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AppLovinSDK/AppLovinSDK.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MaxTestBannerController : UIViewController
+@interface MaxTestBannerController : UIViewController <MAAdViewAdDelegate>
+
+@property (nonatomic, strong) MAAdView *adView;
+@property (nonatomic, strong) MAAdView *mrecView;
+
+
 
 @end
 
