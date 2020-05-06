@@ -7,6 +7,7 @@
 //
 
 #import "MAxRewardedViewController.h"
+#import "Constants.h"
 
 @interface MAxRewardedViewController ()
 
@@ -32,7 +33,7 @@
 
 
 - (void)createRewardedAd{
-    self.rewardedAd = [MARewardedAd sharedWithAdUnitIdentifier: @"d4f2e8a152818109"];
+    self.rewardedAd = [MARewardedAd sharedWithAdUnitIdentifier: kDefaultInMobiTestRewarded];
     self.rewardedAd.delegate = self;
     [self.rewardedAd loadAd];
 }

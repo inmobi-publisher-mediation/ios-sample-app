@@ -107,6 +107,7 @@
 		92B2CC76241088650092CA65 /* InMobiABMoPubPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InMobiABMoPubPlugin.framework; path = "Pods/InMobiABMoPubPlugin/network-support/MoPub/InMobiABMoPubPlugin.framework"; sourceTree = "<group>"; };
 		92B2CC832411BB040092CA65 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		92B2CC842411BB040092CA65 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		92CDF14C2462473D00D13842 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		92DFB94F242D5C41007D728D /* imabmax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imabmax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DFB951242D5C41007D728D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92DFB952242D5C41007D728D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -270,6 +271,7 @@
 				92DFB95F242D5C42007D728D /* LaunchScreen.storyboard */,
 				92DFB962242D5C42007D728D /* Info.plist */,
 				92DFB963242D5C42007D728D /* main.m */,
+				92CDF14C2462473D00D13842 /* Constants.h */,
 			);
 			path = imabmax;
 			sourceTree = "<group>";

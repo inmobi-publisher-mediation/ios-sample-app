@@ -7,8 +7,12 @@
 //
 
 #import "MaxTestBannerController.h"
+#import "Constants.h"
 
 @interface MaxTestBannerController ()
+
+
+
 
 @end
 
@@ -24,7 +28,7 @@
 
 
 - (void)createBannerAd {
-    self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: @"9a1dc9f805b06bca"];
+    self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: kDefaultInMobiTestBanner];
     self.adView.delegate = self;
 
     // Banner height on iPhone and iPad is 50 and 90, respectively
@@ -49,7 +53,7 @@
 
 
 - (void)createMrecAd {
-    self.mrecView = [[MAAdView alloc] initWithAdUnitIdentifier: @"8112cbac910b7de2" adFormat: MAAdFormat.mrec];
+    self.mrecView = [[MAAdView alloc] initWithAdUnitIdentifier: kDefaultInMobiTestMREC adFormat: MAAdFormat.mrec];
 
 //    self.adView.translatesAutoresizingMaskIntoConstraints = NO;
     self.mrecView.delegate = self;
@@ -64,7 +68,7 @@
     self.mrecView.frame = CGRectMake(x, ([[UIScreen mainScreen] bounds].size.height - (height*2)), width, height);
 
     // Set background or background color for banners to be fully functional
-    self.mrecView.backgroundColor = UIColor.redColor;
+//    self.mrecView.backgroundColor = UIColor.redColor;
 
     [self.view addSubview: self.mrecView];
 

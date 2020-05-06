@@ -8,6 +8,7 @@
 
 #import "MaxTestViewController.h"
 #import <AppLovinSDK/AppLovinSDK.h>
+#import "Constants.h"
 
 
 @interface MaxTestViewController () <MAAdDelegate>
@@ -37,7 +38,7 @@
 
 - (void)createInterstitialAd
 {
-    self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: @"612315d0682a8a53"];
+    self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: kDefaultInMobiTestInterstitial];
     self.interstitialAd.delegate = self;
 
     // Load the first ad
