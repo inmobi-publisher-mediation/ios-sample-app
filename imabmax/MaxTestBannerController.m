@@ -18,12 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createBannerAd];
+    [self createMrecAd];
 }
+
 
 
 - (void)createBannerAd {
     self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: @"9a1dc9f805b06bca"];
-//    self.adView.translatesAutoresizingMaskIntoConstraints = NO;
     self.adView.delegate = self;
 
     // Banner height on iPhone and iPad is 50 and 90, respectively
@@ -46,12 +47,53 @@
 }
 
 
+
+- (void)createMrecAd {
+    self.mrecView = [[MAAdView alloc] initWithAdUnitIdentifier: @"8112cbac910b7de2" adFormat: MAAdFormat.mrec];
+
+//    self.adView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.mrecView.delegate = self;
+
+    // MREC width and height are 300 and 250, respectively on iPhone and iPad
+    CGFloat width = 300;
+    CGFloat height = 250;
+
+    // Center the MREC
+    CGFloat x = self.view.center.x - 150;
+
+    self.mrecView.frame = CGRectMake(x, ([[UIScreen mainScreen] bounds].size.height - (height*2)), width, height);
+
+    // Set background or background color for banners to be fully functional
+    self.mrecView.backgroundColor = UIColor.redColor;
+
+    [self.view addSubview: self.mrecView];
+
+    // Load the first ad
+    [self.mrecView loadAd];
+    
+
+}
+
+
+
+
+
 #pragma mark - MAAdDelegate Protocol
 
 - (void)didLoadAd:(MAAd *)ad {
     
-    self.adView.hidden = NO;
-    [self.adView startAutoRefresh];
+    if (ad.format == MAAdFormat.mrec) {
+        self.mrecView.hidden = NO;
+        [self.mrecView startAutoRefresh];
+
+    } else  {
+        if (self.adView != NULL) {
+            self.adView.hidden = NO;
+            [self.adView startAutoRefresh];
+        }
+
+    }
+
 }
 
 - (void)didFailToLoadAdForAdUnitIdentifier:(NSString *)adUnitIdentifier withErrorCode:(NSInteger)errorCode {}

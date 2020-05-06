@@ -37,7 +37,7 @@
 
 - (void)createInterstitialAd
 {
-    self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: @"93e7b5a438c9a4e7"];
+    self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: @"612315d0682a8a53"];
     self.interstitialAd.delegate = self;
 
     // Load the first ad
