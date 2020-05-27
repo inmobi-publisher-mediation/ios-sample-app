@@ -17,23 +17,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCN-5p-bzG">
-                                <rect key="frame" x="36" y="264" width="341" height="21"/>
+                                <rect key="frame" x="36" y="93" width="341" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpM-Xm-Mrn">
-                                <rect key="frame" x="36" y="293" width="341" height="21"/>
+                                <rect key="frame" x="36" y="122" width="341" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeB-Vi-y1j">
-                                <rect key="frame" x="36" y="440" width="341" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX3-Iu-dgQ">
+                                <rect key="frame" x="36" y="336" width="341" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Banner MP Test"/>
+                                <connections>
+                                    <segue destination="BRX-Yo-aY0" kind="show" id="RPj-mH-bQC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeB-Vi-y1j">
+                                <rect key="frame" x="36" y="424" width="341" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Banner KW Test"/>
                                 <connections>
                                     <segue destination="HEq-al-FGg" kind="show" id="TCB-eq-Pbk"/>
                                 </connections>
@@ -51,6 +59,44 @@
             </objects>
             <point key="canvasLocation" x="-307.24637681159425" y="120.53571428571428"/>
         </scene>
+        <!--Banner PassMP View Controller-->
+        <scene sceneID="6ET-F8-CEd">
+            <objects>
+                <viewController id="BRX-Yo-aY0" customClass="BannerPassMPViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="44Q-8v-m4z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAy-cb-heQ">
+                                <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Banner Bid">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeBannerBid:" destination="BRX-Yo-aY0" eventType="touchUpInside" id="yGP-yw-c7K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoh-fA-1gW">
+                                <rect key="frame" x="0.0" y="78" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="MREC Bid">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeMrecBid:" destination="BRX-Yo-aY0" eventType="touchUpInside" id="7PB-na-dff"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KPE-qW-Knb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qfM-2o-eoz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqh-vZ-xdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765" y="-587"/>
+        </scene>
         <!--BannerKW Controller-->
         <scene sceneID="wvW-EK-RyL">
             <objects>
@@ -59,15 +105,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-pz-eCY">
-                                <rect key="frame" x="0.0" y="155" width="414" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-pz-eCY">
+                                <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Banner Bid"/>
                                 <connections>
                                     <action selector="makeBannerBid:" destination="HEq-al-FGg" eventType="touchUpInside" id="1xL-OR-Nj5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kH8-sA-Flv">
-                                <rect key="frame" x="0.0" y="193" width="414" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kH8-sA-Flv">
+                                <rect key="frame" x="0.0" y="78" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="MREC Bid"/>
                                 <connections>
                                     <action selector="makeMrecBid:" destination="HEq-al-FGg" eventType="touchUpInside" id="IAt-9C-lZP"/>
@@ -75,13 +123,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="AcI-pz-eCY" firstAttribute="top" secondItem="Lht-2j-Dxu" secondAttribute="top" constant="155" id="2Kv-RI-qZF"/>
-                            <constraint firstItem="AcI-pz-eCY" firstAttribute="centerX" secondItem="kH8-sA-Flv" secondAttribute="centerX" id="F7Q-w2-OxH"/>
-                            <constraint firstItem="AcI-pz-eCY" firstAttribute="leading" secondItem="Lht-2j-Dxu" secondAttribute="leading" constant="170" id="Lf4-Wi-XfM"/>
-                            <constraint firstItem="kH8-sA-Flv" firstAttribute="top" secondItem="AcI-pz-eCY" secondAttribute="bottom" constant="22" id="kth-SN-mkf"/>
-                            <constraint firstItem="AcI-pz-eCY" firstAttribute="centerX" secondItem="kvT-Yf-Ow5" secondAttribute="centerX" id="oAX-JZ-DaB"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lht-2j-Dxu"/>
                     </view>
                     <navigationItem key="navigationItem" id="dQG-xO-3qF"/>

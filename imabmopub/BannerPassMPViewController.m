@@ -1,16 +1,15 @@
 //
-//  BannerKWController.m
+//  BannerPassMPViewController.m
 //  imabmopub
 //
-//  Created by Jason C on 2/11/20.
+//  Created by Jason C on 5/27/20.
 //  Copyright © 2020 Jason C. All rights reserved.
 //
 
-#import "BannerKWController.h"
+#import "BannerPassMPViewController.h"
 #import "Constants.h"
 
-
-@implementation BannerKWController
+@implementation BannerPassMPViewController
 
 
 - (void)viewDidLoad {
@@ -18,39 +17,49 @@
     
     self.adView = nil;
     self.IMBannerBid = nil;
-    self.bannerKWLoaded = false;
+    self.bannerLoaded = false;
     self.isLoadingMrec = false;
 }
-
 
 
 #pragma mark - <IBAction Methods>
 
 
-
 - (IBAction)makeBannerBid:(id)sender {
-    self.bannerKWLoaded = false;
-
-    [self createBidForBidType:0];
-    [self submitBidFor320x50Banner];
+        self.bannerLoaded = false;
+    
+        [self createBidForBidType:0];
+        [self submitBidFor320x50Banner];
 }
 
 
 - (IBAction)makeMrecBid:(id)sender {
-    self.bannerKWLoaded = false;
-
-    [self createBidForBidType:1];
-    [self submitBidForMRECBanner];
+    
+        self.bannerLoaded = false;
+    
+        [self createBidForBidType:1];
+        [self submitBidForMRECBanner];
+    
 }
 
 
-
-#pragma mark - <IMAB Banner Methods>
+//- (IBAction)makeBannerBid:(id)sender {
+//    self.bannerKWLoaded = false;
+//
+//    [self createBidForBidType:0];
+//    [self submitBidFor320x50Banner];
+//}
+//
+//
+//- (IBAction)makeMrecBid:(id)sender {
+//    self.bannerKWLoaded = false;
+//
+//    [self createBidForBidType:1];
+//    [self submitBidForMRECBanner];
+//}
 
 
 - (void) createBidForBidType:(NSInteger)type {
-    
-
     
     switch (type) {
         case 1: {
@@ -70,6 +79,7 @@
 }
 
 
+
 - (void) submitBidFor320x50Banner {
     
     if (!self.IMBannerBid){
@@ -83,7 +93,7 @@
     [self configureBannerForPlacementID:kMPBannerID
                                 andSize:MOPUB_BANNER_SIZE];
       
-    [self.IMBannerBid requestBid:self timeout:kBidTimeout];
+    [self.IMBannerBid requestBid:self.adView timeout:kBidTimeout];
 }
 
 
@@ -103,33 +113,31 @@
                                 andSize:MOPUB_MEDIUM_RECT_SIZE];
     
       
-    [self.IMBannerBid requestBid:self timeout:kBidTimeout];
+    [self.IMBannerBid requestBid:self.adView timeout:kBidTimeout];
     
 }
 
 
 - (void) cleanupBanner {
     self.isLoadingMrec = false;
-    self.bannerKWLoaded = false;
+    self.bannerLoaded = false;
     
     // TODO: Additional cleanup here
 }
 
 
 - (void) configureBannerForPlacementID:(NSString*)mopubPLC andSize:(CGSize)size {
-    
-    self.adView = [[MPAdView alloc] initWithAdUnitId:mopubPLC];
-    self.adView.frame = CGRectMake((self.view.bounds.size.width - size.width) / 2, self.view.bounds.size.height - (size.height), size.width, size.height);
-    
-    self.adView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.adView.layer.borderWidth = 3;
-    self.adView.layer.backgroundColor = [UIColor redColor].CGColor;
 
-    [self.adView stopAutomaticallyRefreshingContents];          
-    self.adView.delegate = self;
+self.adView = [[MPAdView alloc] initWithAdUnitId:mopubPLC];
+self.adView.frame = CGRectMake((self.view.bounds.size.width - size.width) / 2, self.view.bounds.size.height - (size.height), size.width, size.height);
 
+self.adView.layer.borderColor = [UIColor blackColor].CGColor;
+self.adView.layer.borderWidth = 3;
+self.adView.layer.backgroundColor = [UIColor redColor].CGColor;
+
+[self.adView stopAutomaticallyRefreshingContents];
+self.adView.delegate = self;
 }
-
 
 
 #pragma mark - <MPAdViewDelegate>
@@ -140,7 +148,7 @@
     
     NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - adViewDidLoadAd"]);
 
-    self.bannerKWLoaded = true;
+    self.bannerLoaded = true;
         
      if (self.isLoadingMrec) {
           // [self submitBidForMRECBanner]; // MREC does not refresh
@@ -157,7 +165,7 @@
  
     NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - adViewDidFailToLoadAd"]);
     
-    self.bannerKWLoaded = true;
+    self.bannerLoaded = true;
 
     if (self.isLoadingMrec) {
         // [self submitBidForMRECBanner]; // MREC does not refresh
@@ -179,7 +187,7 @@
     
     NSLog(@"IMAudienceBidder:- bidFailedFor withError: %@", error.localizedDescription);
     
-    if (!self.bannerKWLoaded){
+    if (!self.bannerLoaded){
         [self.view addSubview:self.adView];
         [self.adView loadAd];
     }
@@ -190,40 +198,13 @@
     
     NSLog(@"IMAudienceBidder - bidRecievedFor withTransactionInfo: %@", keyword);
     
-    NSMutableDictionary* extras = [self.adView.localExtras mutableCopy];
-    
-    if (![extras isKindOfClass:[NSMutableDictionary class]]) {
-        extras = [NSMutableDictionary new];
-    }
-    
-    IMFacadeObjectHolder* facadeObject = [[IMFacadeObjectHolder alloc] initWithMoPubObject:self.adView andInMobiObject:imAd];
-    
-    extras[kIMABInMobiObjectKey] = facadeObject;
-    self.adView.localExtras = [NSDictionary dictionaryWithDictionary:extras];
-    
-    
-    NSString* keywords = self.adView.keywords;
-    self.adView.keywords = [self processMoPubKeywords:keywords byAppendingInMobiBid:keyword];
-    
-    if (!self.bannerKWLoaded){
+    if (!self.bannerLoaded){
         [self.view addSubview:self.adView];
         [self.adView loadAd];
     }
     
     
 }
-
-
-- (NSString*)processMoPubKeywords:(NSString*)keyword byAppendingInMobiBid:(NSString*)bid {
-    if (!keyword) {
-        keyword = bid;
-    } else {
-        keyword = [NSString stringWithFormat:@"%@,%@", keyword, bid];
-    }
-    return keyword;
-}
-
-
 
 
 @end

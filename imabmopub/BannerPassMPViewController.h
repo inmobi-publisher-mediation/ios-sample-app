@@ -1,8 +1,8 @@
 //
-//  BannerKWController.h
+//  BannerPassMPViewController.h
 //  imabmopub
 //
-//  Created by Jason C on 2/11/20.
+//  Created by Jason C on 5/27/20.
 //  Copyright © 2020 Jason C. All rights reserved.
 //
 
@@ -10,13 +10,15 @@
 #import "MoPub.h"
 #import <InMobiMoPubPlugin/InMobiMoPubPlugin.h>
 
-@interface BannerKWController : UIViewController <MPAdViewDelegate, IMABMoPubDelegate>
+@interface BannerPassMPViewController : UIViewController <MPAdViewDelegate, IMABMoPubDelegate>
 
 @property (nonatomic, strong) MPAdView *adView;
 @property (nonatomic, strong) IMABMoPubBanner *IMBannerBid;
 
-@property (nonatomic, assign) Boolean bannerKWLoaded;
+@property (nonatomic, assign) Boolean bannerLoaded;
 @property (nonatomic, assign) Boolean isLoadingMrec;
 
 
+
 @end
+
