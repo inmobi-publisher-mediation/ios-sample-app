@@ -7,7 +7,8 @@ inhibit_all_warnings!
 
 target 'imabmopub' do
   # Pods for imabmopub
-  pod 'InMobiABMoPubPlugin'
+  pod 'mopub-ios-sdk'
+  pod 'InMobiMoPubPlugin'
 end
 
 target 'inmobi-sample-app-objc' do

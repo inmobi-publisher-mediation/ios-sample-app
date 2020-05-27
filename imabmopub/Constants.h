@@ -15,10 +15,18 @@
 
 
 // InMobi IMAB Values
-#define kIMABAppID @"1020421"
-#define kASBannerID @"1064941"
-#define kASMRECID @"1068393"
-#define kASInterstitialID @"1064942"
+
+
+#define kIMAccountID @"7a22e2d2c7df43fdba653f61d84b8bfd"
+#define kIMBannerID 1591603176870
+#define kIMMRECID 1592588688274
+#define kIMInterstitialID 1590163119906
+#define kBidTimeout 3000
+
+//#define kIMABAppID @"1020421" // Old AerServ implementation
+//#define kASBannerID @"1064941"
+//#define kASMRECID @"1068393"
+//#define kASInterstitialID @"1064942"
 
 #define kLogTag @"IMABTEST: "
 #define kAppName @"Audience Bidder Test"

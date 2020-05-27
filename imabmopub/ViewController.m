@@ -26,11 +26,9 @@
 
 
 - (void)setupAdditionalViewElements{
-    
     self.title = kAppName;
-    self.InMobiSDKVersion.text = [NSString stringWithFormat:@"%s%@", "InMobi SDK Version: ", [AerServSDK sdkVersion]];;
+    self.InMobiSDKVersion.text = [NSString stringWithFormat:@"%s%@", "InMobi SDK Version: ", [IMSdk getVersion]];
     self.MoPubSDKVersion.text = [NSString stringWithFormat:@"%s%@", "MoPub SDK Version: ", MP_SDK_VERSION];
-
 }
 
 

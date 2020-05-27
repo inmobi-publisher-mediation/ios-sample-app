@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Constants.h"
+#import <InMobiSDK/InMobiSDK.h>
 
 @interface AppDelegate ()
 
@@ -21,8 +22,10 @@
     MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:kMPInterstitialID];
     [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:nil];
     
-    [IMSdk setLogLevel:kIMSDKLogLevelDebug];
-    [IMAudienceBidder initializeWithAppID:kIMABAppID andUserConsent:@{ IM_GDPR_CONSENT_AVAILABLE : @YES }];
+//    [IMSdk setLogLevel:kIMSDKLogLevelDebug];
+//    [IMAudienceBidder initializeWithAppID:kIMABAppID andUserConsent:@{ IM_GDPR_CONSENT_AVAILABLE : @YES }];
+    
+    [IMSdk initWithAccountID:kIMAccountID andCompletionHandler:nil]; // todo: figure out completion handler, and test / validate GDPR controls
     
     return YES;
 }

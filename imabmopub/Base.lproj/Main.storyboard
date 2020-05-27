@@ -62,6 +62,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-pz-eCY">
                                 <rect key="frame" x="0.0" y="155" width="414" height="30"/>
                                 <state key="normal" title="Banner Bid"/>
+                                <connections>
+                                    <action selector="makeBannerBid:" destination="HEq-al-FGg" eventType="touchUpInside" id="1xL-OR-Nj5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kH8-sA-Flv">
                                 <rect key="frame" x="0.0" y="193" width="414" height="30"/>
@@ -70,24 +73,14 @@
                                     <action selector="makeMrecBid:" destination="HEq-al-FGg" eventType="touchUpInside" id="IAt-9C-lZP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ws3-i8-O5d">
-                                <rect key="frame" x="0.0" y="231" width="414" height="30"/>
-                                <state key="normal" title="Inject Banner "/>
-                                <connections>
-                                    <action selector="injectBanner:" destination="HEq-al-FGg" eventType="touchUpInside" id="81x-X7-rW7"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="AcI-pz-eCY" firstAttribute="top" secondItem="Lht-2j-Dxu" secondAttribute="top" constant="155" id="2Kv-RI-qZF"/>
-                            <constraint firstItem="ws3-i8-O5d" firstAttribute="leading" secondItem="Lht-2j-Dxu" secondAttribute="leading" constant="160" id="544-aX-adO"/>
                             <constraint firstItem="AcI-pz-eCY" firstAttribute="centerX" secondItem="kH8-sA-Flv" secondAttribute="centerX" id="F7Q-w2-OxH"/>
-                            <constraint firstItem="ws3-i8-O5d" firstAttribute="top" secondItem="kH8-sA-Flv" secondAttribute="bottom" constant="30" id="JNL-oj-ghj"/>
                             <constraint firstItem="AcI-pz-eCY" firstAttribute="leading" secondItem="Lht-2j-Dxu" secondAttribute="leading" constant="170" id="Lf4-Wi-XfM"/>
                             <constraint firstItem="kH8-sA-Flv" firstAttribute="top" secondItem="AcI-pz-eCY" secondAttribute="bottom" constant="22" id="kth-SN-mkf"/>
                             <constraint firstItem="AcI-pz-eCY" firstAttribute="centerX" secondItem="kvT-Yf-Ow5" secondAttribute="centerX" id="oAX-JZ-DaB"/>
-                            <constraint firstItem="AcI-pz-eCY" firstAttribute="centerX" secondItem="ws3-i8-O5d" secondAttribute="centerX" id="prk-Qj-AdH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lht-2j-Dxu"/>
                     </view>

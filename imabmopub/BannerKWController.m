@@ -16,13 +16,13 @@
 @implementation BannerKWController
 
 
-Boolean bannerKWLoaded = false;
-Boolean isLoadingMrec = false;
-
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.adView = nil;
+    self.IMBannerBid = nil;
+    self.bannerKWLoaded = false;
+    self.isLoadingMrec = false;
 }
 
 
@@ -31,47 +31,19 @@ Boolean isLoadingMrec = false;
 
 
 
+- (IBAction)makeBannerBid:(id)sender {
+    self.bannerKWLoaded = false;
+
+    [self createBidForBidType:0];
+    [self submitBidFor320x50Banner];
+}
+
+
 - (IBAction)makeMrecBid:(id)sender {
-    bannerKWLoaded = false;
+    self.bannerKWLoaded = false;
+
+    [self createBidForBidType:1];
     [self submitBidForMRECBanner];
-}
-
-- (IBAction)injectBanner:(id)sender {
-    bannerKWLoaded = false;
-    [self injectBannerIntoView];
-}
-
-
-
-#pragma mark - <IMAB Delegate Methods>
-
-
-
-- (void)audienceBidderDidFailBidFor:(id)adObject withError:(NSError *)error {
-    
-    NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - audienceBidderDidFailBidFor"]);
-    
-    if([adObject isKindOfClass:[MPAdView class]]) {
-        
-        if (!bannerKWLoaded){
-            [self.adView loadAd];
-        }
-        
-    }
-    
-}
-
-- (void)audienceBidderDidGenerateBidResponse:(IMBidResponse *)bidResponse {
-    
-    NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - audienceBidderDidGenerateBidResponse"]);
-    
-    [self.adView setKeywords:bidResponse.keyword];
-    self.adView.localExtras = @{kIMABLocalCacheKey : bidResponse.placement};
-        
-    if (!bannerKWLoaded){
-        [self.adView loadAd];
-    }
-    
 }
 
 
@@ -79,48 +51,79 @@ Boolean isLoadingMrec = false;
 #pragma mark - <IMAB Banner Methods>
 
 
+- (void) createBidForBidType:(NSInteger)type {
+    
 
-- (void) injectBannerIntoView {
-    [self.view addSubview:self.adView];
+    
+    switch (type) {
+        case 1: {
+            self.IMBannerBid = [[IMABMoPubBanner alloc]
+                                 initWithFrame:CGRectMake(0,0, 300, 250)
+                                 placementId:kIMBannerID
+                                delegate:self];
+        }
+        default: {
+            self.IMBannerBid = [[IMABMoPubBanner alloc]
+                                initWithFrame:CGRectMake(0, 0, 320, 50)
+                                placementId:kIMBannerID
+                                delegate:self];
+        }
+
+    }
 }
+
 
 - (void) submitBidFor320x50Banner {
     
-    NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - submitBannerKWBid"]);
-    isLoadingMrec = false;
-    
-    if (!bannerKWLoaded){
-        [self configureBannerForPlacementID:kMPBannerID andSize:MOPUB_BANNER_SIZE];
+    if (!self.IMBannerBid){
+        // createBidForBidType has not yet been called, short-terminate.
+        return;
     }
     
-    [IMAudienceBidder submitBidForAdType:kIMBiddingAdTypeBanner withPlacement:kASBannerID adSize:MOPUB_BANNER_SIZE andDelegate:self];
+    NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - submitBannerKWBid"]);
+    self.isLoadingMrec = false;
     
+    [self configureBannerForPlacementID:kMPBannerID
+                                andSize:MOPUB_BANNER_SIZE];
+      
+    [self.IMBannerBid requestBid:self timeout:kBidTimeout];
 }
+
 
 - (void) submitBidForMRECBanner {
     
-    NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - submitMRECKWBid"]);
-    isLoadingMrec = true;
-
-    if (!bannerKWLoaded){
-        [self configureBannerForPlacementID:kMPMRECID andSize:MOPUB_MEDIUM_RECT_SIZE];
+    if (!self.IMBannerBid){
+        // createBidForBidType has not yet been called, short-terminate.
+        return;
     }
     
-    [IMAudienceBidder submitBidForAdType:kIMBiddingAdTypeBanner withPlacement:kASMRECID adSize:MOPUB_MEDIUM_RECT_SIZE andDelegate:self];
+    
+    NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - submitMRECKWBid"]);
+    self.isLoadingMrec = true;
+
+    
+    [self configureBannerForPlacementID:kMPMRECID
+                                andSize:MOPUB_MEDIUM_RECT_SIZE];
+    
+      
+    [self.IMBannerBid requestBid:self timeout:kBidTimeout];
+    
 }
 
+
 - (void) cleanupBanner {
-    isLoadingMrec = false;
-    bannerKWLoaded = false;
-    // TODO: cleanup view
+    self.isLoadingMrec = false;
+    self.bannerKWLoaded = false;
+    
+    // TODO: Additional cleanup here
 }
+
 
 - (void) configureBannerForPlacementID:(NSString*)mopubPLC andSize:(CGSize)size {
     
     self.adView = [[MPAdView alloc] initWithAdUnitId:mopubPLC];
     self.adView.frame = CGRectMake((self.view.bounds.size.width - size.width) / 2, self.view.bounds.size.height - (size.height), size.width, size.height);
     
-
     self.adView.layer.borderColor = [UIColor blackColor].CGColor;
     self.adView.layer.borderWidth = 3;
     self.adView.layer.backgroundColor = [UIColor redColor].CGColor;
@@ -136,34 +139,93 @@ Boolean isLoadingMrec = false;
 
 
 
-- (void)adViewDidLoadAd:(MPAdView *)view {
+- (void)adViewDidLoadAd:(MPAdView *)view adSize:(CGSize)adSize {
     
     NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - adViewDidLoadAd"]);
 
-    bannerKWLoaded = true;
+    self.bannerKWLoaded = true;
         
-     if (isLoadingMrec) {
-          [self submitBidForMRECBanner];
+     if (self.isLoadingMrec) {
+          // [self submitBidForMRECBanner]; // MREC does not refresh
       }
      else {
+         [self createBidForBidType:0];
           [self submitBidFor320x50Banner];
       }
     
 }
 
-- (void)adViewDidFailToLoadAd:(MPAdView *)view {
-    
+
+- (void)adView:(MPAdView *)view didFailToLoadAdWithError:(NSError *)error {
+ 
     NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - adViewDidFailToLoadAd"]);
     
-    bannerKWLoaded = true;
+    self.bannerKWLoaded = true;
 
-    if (isLoadingMrec) {
-        [self submitBidForMRECBanner];
+    if (self.isLoadingMrec) {
+        // [self submitBidForMRECBanner]; // MREC does not refresh
     }
     else {
+        [self createBidForBidType:0];
         [self submitBidFor320x50Banner];
     }
+    
 }
+
+
+
+#pragma mark - IMAB V2 Banner delegates
+
+
+
+- (void)bidFailedFor:(nullable id)ad withError:(nonnull NSError *)error {
+    
+    NSLog(@"IMAudienceBidder:- bidFailedFor withError: %@", error.localizedDescription);
+    
+    if (!self.bannerKWLoaded){
+        [self.view addSubview:self.adView];
+        [self.adView loadAd];
+    }
+    
+}
+
+- (void)bidRecievedFor:(nullable id)mpAd andInMobiAd:(nonnull id)imAd withTransactionInfo:(nonnull NSString *)keyword {
+    
+    NSLog(@"IMAudienceBidder - bidRecievedFor withTransactionInfo: %@", keyword);
+    
+    NSMutableDictionary* extras = [self.adView.localExtras mutableCopy];
+    
+    if (![extras isKindOfClass:[NSMutableDictionary class]]) {
+        extras = [NSMutableDictionary new];
+    }
+    
+    IMFacadeObjectHolder* facadeObject = [[IMFacadeObjectHolder alloc] initWithMoPubObject:self.adView andInMobiObject:imAd];
+    
+    extras[kIMABInMobiObjectKey] = facadeObject;
+    self.adView.localExtras = [NSDictionary dictionaryWithDictionary:extras];
+    
+    
+    NSString* keywords = self.adView.keywords;
+    self.adView.keywords = [self processMoPubKeywords:keywords byAppendingInMobiBid:keyword];
+    
+    if (!self.bannerKWLoaded){
+        [self.view addSubview:self.adView];
+        [self.adView loadAd];
+    }
+    
+    
+}
+
+
+- (NSString*)processMoPubKeywords:(NSString*)keyword byAppendingInMobiBid:(NSString*)bid {
+    if (!keyword) {
+        keyword = bid;
+    } else {
+        keyword = [NSString stringWithFormat:@"%@,%@", keyword, bid];
+    }
+    return keyword;
+}
+
 
 
 

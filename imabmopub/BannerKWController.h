@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "MoPub.h"
 #import <InMobiSDK/InMobiSDK.h>
+#import <InMobiMoPubPlugin/InMobiMoPubPlugin.h>
 
+@interface BannerKWController : UIViewController <MPAdViewDelegate, IMABMoPubDelegate>
 
-@interface BannerKWController : UIViewController <MPAdViewDelegate, IMAudienceBidderDelegate>
+@property (nonatomic, strong) MPAdView *adView;
+@property (nonatomic, strong) IMABMoPubBanner *IMBannerBid;
 
-@property (strong, nonatomic) MPAdView *adView;                                     // For MoPub Banner
+@property (nonatomic, assign) Boolean bannerKWLoaded;
+@property (nonatomic, assign) Boolean isLoadingMrec;
+
 
 @end
