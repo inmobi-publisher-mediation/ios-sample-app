@@ -31,6 +31,10 @@
     self.MoPubSDKVersion.text = [NSString stringWithFormat:@"%s%@", "MoPub SDK Version: ", MP_SDK_VERSION];
 }
 
+- (IBAction)myUnwindAction:(UIStoryboardSegue*)unwindSegue {
+    
+}
+
 
 @end
 

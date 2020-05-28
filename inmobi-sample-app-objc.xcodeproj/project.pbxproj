@@ -32,6 +32,8 @@
 		92749F6F242587340061A2FE /* InMobiMediationSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD0AC23F38769000AE3FC /* InMobiMediationSDK.framework */; };
 		92749F71242587340061A2FE /* InMobiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD0AB23F38769000AE3FC /* InMobiSDK.framework */; };
 		92966D0D247F2CB70008E958 /* BannerPassMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92966D0C247F2CB70008E958 /* BannerPassMPViewController.m */; };
+		92966D1024806F5F0008E958 /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92966D0F24806F5F0008E958 /* InterstitialViewController.m */; };
+		92966D1324806F750008E958 /* InterstitialKWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92966D1224806F750008E958 /* InterstitialKWViewController.m */; };
 		92A73965247DA3BE009AAF59 /* THIRD-PARTY-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 92A73958247DA3BE009AAF59 /* THIRD-PARTY-LICENSE */; };
 		92A73966247DA3BE009AAF59 /* InMobiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A73959247DA3BE009AAF59 /* InMobiSDK.framework */; };
 		92A73967247DA3BE009AAF59 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 92A7395A247DA3BE009AAF59 /* LICENSE */; };
@@ -117,6 +119,10 @@
 		92749F6B242586CC0061A2FE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		92966D0B247F2CB70008E958 /* BannerPassMPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerPassMPViewController.h; sourceTree = "<group>"; };
 		92966D0C247F2CB70008E958 /* BannerPassMPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerPassMPViewController.m; sourceTree = "<group>"; };
+		92966D0E24806F5F0008E958 /* InterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
+		92966D0F24806F5F0008E958 /* InterstitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
+		92966D1124806F750008E958 /* InterstitialKWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialKWViewController.h; sourceTree = "<group>"; };
+		92966D1224806F750008E958 /* InterstitialKWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialKWViewController.m; sourceTree = "<group>"; };
 		92A73958247DA3BE009AAF59 /* THIRD-PARTY-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "THIRD-PARTY-LICENSE"; sourceTree = "<group>"; };
 		92A73959247DA3BE009AAF59 /* InMobiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InMobiSDK.framework; sourceTree = "<group>"; };
 		92A7395A247DA3BE009AAF59 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -752,6 +758,10 @@
 				926CD0A923F38353000AE3FC /* BannerKWController.m */,
 				92966D0B247F2CB70008E958 /* BannerPassMPViewController.h */,
 				92966D0C247F2CB70008E958 /* BannerPassMPViewController.m */,
+				92966D0E24806F5F0008E958 /* InterstitialViewController.h */,
+				92966D0F24806F5F0008E958 /* InterstitialViewController.m */,
+				92966D1124806F750008E958 /* InterstitialKWViewController.h */,
+				92966D1224806F750008E958 /* InterstitialKWViewController.m */,
 			);
 			path = imabmopub;
 			sourceTree = "<group>";
@@ -1870,7 +1880,9 @@
 				926CD09223F37AA5000AE3FC /* AppDelegate.m in Sources */,
 				92B2CC852411BB040092CA65 /* SceneDelegate.m in Sources */,
 				926CD0A323F37AA6000AE3FC /* main.m in Sources */,
+				92966D1024806F5F0008E958 /* InterstitialViewController.m in Sources */,
 				92966D0D247F2CB70008E958 /* BannerPassMPViewController.m in Sources */,
+				92966D1324806F750008E958 /* InterstitialKWViewController.m in Sources */,
 				926CD0AA23F38353000AE3FC /* BannerKWController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
