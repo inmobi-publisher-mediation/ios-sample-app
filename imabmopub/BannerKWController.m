@@ -56,8 +56,9 @@
         case 1: {
             self.IMBannerBid = [[IMABMoPubBanner alloc]
                                  initWithFrame:CGRectMake(0,0, 300, 250)
-                                 placementId:kIMBannerID
+                                 placementId:kIMMRECID
                                 delegate:self];
+            break;
         }
         default: {
             self.IMBannerBid = [[IMABMoPubBanner alloc]
@@ -122,7 +123,7 @@
     self.adView.frame = CGRectMake((self.view.bounds.size.width - size.width) / 2, self.view.bounds.size.height - (size.height), size.width, size.height);
     
     self.adView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.adView.layer.borderWidth = 3;
+    self.adView.layer.borderWidth = 1;
     self.adView.layer.backgroundColor = [UIColor redColor].CGColor;
 
     [self.adView stopAutomaticallyRefreshingContents];          

@@ -43,21 +43,6 @@
 }
 
 
-//- (IBAction)makeBannerBid:(id)sender {
-//    self.bannerKWLoaded = false;
-//
-//    [self createBidForBidType:0];
-//    [self submitBidFor320x50Banner];
-//}
-//
-//
-//- (IBAction)makeMrecBid:(id)sender {
-//    self.bannerKWLoaded = false;
-//
-//    [self createBidForBidType:1];
-//    [self submitBidForMRECBanner];
-//}
-
 
 - (void) createBidForBidType:(NSInteger)type {
     
@@ -65,8 +50,9 @@
         case 1: {
             self.IMBannerBid = [[IMABMoPubBanner alloc]
                                  initWithFrame:CGRectMake(0,0, 300, 250)
-                                 placementId:kIMBannerID
+                                 placementId:kIMMRECID
                                 delegate:self];
+            break;
         }
         default: {
             self.IMBannerBid = [[IMABMoPubBanner alloc]

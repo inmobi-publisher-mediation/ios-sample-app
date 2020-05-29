@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 #import "MoPub.h"
 #import <InMobiMoPubPlugin/InMobiMoPubPlugin.h>
-#import "Constants.h"
 
 
 @interface InterstitialKWViewController : UIViewController <IMABMoPubDelegate, MPInterstitialAdControllerDelegate>
 
 
-@property (nonatomic, strong) IMABMoPubInterstitial* interstitialkw;
+@property (nonatomic, strong) IMABMoPubInterstitial* interstitialKWAd;
 @property (strong, nonatomic) MPInterstitialAdController *mpInterstitial;
 @property (nonatomic, assign) bool kwInterstitialIsLoaded;
 

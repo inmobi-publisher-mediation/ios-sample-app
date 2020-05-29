@@ -23,9 +23,7 @@
 #pragma mark - IB Actions
 
 - (IBAction)doInterstitalBid:(id)sender {
-    
     [self requestBidForInterstitial];
-    
 }
 
 
