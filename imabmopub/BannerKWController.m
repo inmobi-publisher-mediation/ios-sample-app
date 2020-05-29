@@ -126,7 +126,8 @@
     self.adView.layer.borderWidth = 1;
     self.adView.layer.backgroundColor = [UIColor redColor].CGColor;
 
-    [self.adView stopAutomaticallyRefreshingContents];          
+    [self.adView startAutomaticallyRefreshingContents];
+    
     self.adView.delegate = self;
 
 }
@@ -201,6 +202,7 @@
     
     extras[kIMABInMobiObjectKey] = facadeObject;
     self.adView.localExtras = [NSDictionary dictionaryWithDictionary:extras];
+    
     
     
     NSString* keywords = self.adView.keywords;

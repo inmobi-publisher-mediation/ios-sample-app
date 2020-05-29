@@ -120,8 +120,8 @@ self.adView.frame = CGRectMake((self.view.bounds.size.width - size.width) / 2, s
 self.adView.layer.borderColor = [UIColor blackColor].CGColor;
 self.adView.layer.borderWidth = 3;
 self.adView.layer.backgroundColor = [UIColor redColor].CGColor;
+[self.adView startAutomaticallyRefreshingContents];
 
-[self.adView stopAutomaticallyRefreshingContents];
 self.adView.delegate = self;
 }
 
@@ -138,6 +138,8 @@ self.adView.delegate = self;
         
      if (self.isLoadingMrec) {
           // [self submitBidForMRECBanner]; // MREC does not refresh
+         [self.adView stopAutomaticallyRefreshingContents];
+
       }
      else {
          [self createBidForBidType:0];
