@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28CD0AA2D25BAA0514278A4A /* libPods-inmobi-sample-app-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D8B3221ECCDC0F1A3C36CE /* libPods-inmobi-sample-app-objc.a */; };
-		7D76CFE443EAE2F6F28F2590 /* libPods-clientSDKMediation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48342893AD685D61B6BA0694 /* libPods-clientSDKMediation.a */; };
-		83005A02C5A2AECCC8CECCE1 /* libPods-imabmopub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A03CA50E0322D728C9E87576 /* libPods-imabmopub.a */; };
+		179C36B43273366212AA79AF /* Pods_imabmax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C26D78B51DDA12A8C6CA55 /* Pods_imabmax.framework */; };
+		3DC2A6F758BBBD18CDBFA64D /* Pods_inmobi_sample_app_objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17A78D4DD8180C60C6B74E0 /* Pods_inmobi_sample_app_objc.framework */; };
+		3F0C2BB4A2F60621B3E4D09F /* Pods_imabmopub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5FACF9DBB47C445AC64EE0 /* Pods_imabmopub.framework */; };
+		495C332CBCE983A7A3BE74BC /* Pods_clientSDKMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5ADA73D1631828099F0359D /* Pods_clientSDKMediation.framework */; };
+		9209C8FE243D267300DBB0C3 /* MaxTestBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9209C8FD243D267300DBB0C3 /* MaxTestBannerController.m */; };
+		9209C901243D26A200DBB0C3 /* MAxRewardedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9209C900243D26A200DBB0C3 /* MAxRewardedViewController.m */; };
 		926CD07323F37A2B000AE3FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD07223F37A2B000AE3FC /* AppDelegate.m */; };
 		926CD07623F37A2B000AE3FC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD07523F37A2B000AE3FC /* SceneDelegate.m */; };
 		926CD07923F37A2B000AE3FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD07823F37A2B000AE3FC /* ViewController.m */; };
@@ -37,6 +40,14 @@
 		92B2CC7F241091410092CA65 /* InMobiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD0AB23F38769000AE3FC /* InMobiSDK.framework */; };
 		92B2CC81241091420092CA65 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD0B523F3877E000AE3FC /* WebKit.framework */; };
 		92B2CC852411BB040092CA65 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B2CC832411BB040092CA65 /* SceneDelegate.m */; };
+		92DFB953242D5C41007D728D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DFB952242D5C41007D728D /* AppDelegate.m */; };
+		92DFB956242D5C41007D728D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DFB955242D5C41007D728D /* SceneDelegate.m */; };
+		92DFB959242D5C41007D728D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DFB958242D5C41007D728D /* ViewController.m */; };
+		92DFB95C242D5C41007D728D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DFB95A242D5C41007D728D /* Main.storyboard */; };
+		92DFB95E242D5C42007D728D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DFB95D242D5C42007D728D /* Assets.xcassets */; };
+		92DFB961242D5C42007D728D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DFB95F242D5C42007D728D /* LaunchScreen.storyboard */; };
+		92DFB964242D5C42007D728D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DFB963242D5C42007D728D /* main.m */; };
+		92DFB96A242D5CB2007D728D /* MaxTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DFB969242D5CB2007D728D /* MaxTestViewController.m */; };
 		92E7E8E62425500400C9622A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7E8E52425500400C9622A /* AppDelegate.m */; };
 		92E7E8E92425500400C9622A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7E8E82425500400C9622A /* SceneDelegate.m */; };
 		92E7E8EC2425500400C9622A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7E8EB2425500400C9622A /* ViewController.m */; };
@@ -48,11 +59,17 @@
 
 /* Begin PBXFileReference section */
 		009463E2D2C78FAC69A5B5EF /* Pods-inmobi-sample-app-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inmobi-sample-app-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inmobi-sample-app-objc/Pods-inmobi-sample-app-objc.debug.xcconfig"; sourceTree = "<group>"; };
+		0E2F4A510BFB1EB5519F1F06 /* Pods-imabmax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imabmax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imabmax/Pods-imabmax.debug.xcconfig"; sourceTree = "<group>"; };
 		101491C038A1B87625C9DD4A /* Pods-clientSDKMediation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientSDKMediation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clientSDKMediation/Pods-clientSDKMediation.debug.xcconfig"; sourceTree = "<group>"; };
+		2B5FACF9DBB47C445AC64EE0 /* Pods_imabmopub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imabmopub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		399C11570396AF56D765B158 /* Pods-imabmopub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imabmopub.release.xcconfig"; path = "Pods/Target Support Files/Pods-imabmopub/Pods-imabmopub.release.xcconfig"; sourceTree = "<group>"; };
-		48342893AD685D61B6BA0694 /* libPods-clientSDKMediation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-clientSDKMediation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C26D78B51DDA12A8C6CA55 /* Pods_imabmax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imabmax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E1AFFA0CD39EA81E8AFC70 /* Pods-clientSDKMediation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientSDKMediation.release.xcconfig"; path = "Pods/Target Support Files/Pods-clientSDKMediation/Pods-clientSDKMediation.release.xcconfig"; sourceTree = "<group>"; };
 		67BDDAF55A96C7F402D3A1AC /* Pods-imabmopub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imabmopub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imabmopub/Pods-imabmopub.debug.xcconfig"; sourceTree = "<group>"; };
+		9209C8FC243D267300DBB0C3 /* MaxTestBannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxTestBannerController.h; sourceTree = "<group>"; };
+		9209C8FD243D267300DBB0C3 /* MaxTestBannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxTestBannerController.m; sourceTree = "<group>"; };
+		9209C8FF243D26A200DBB0C3 /* MAxRewardedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAxRewardedViewController.h; sourceTree = "<group>"; };
+		9209C900243D26A200DBB0C3 /* MAxRewardedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAxRewardedViewController.m; sourceTree = "<group>"; };
 		926CD06E23F37A2B000AE3FC /* inmobi-sample-app-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inmobi-sample-app-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		926CD07123F37A2B000AE3FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		926CD07223F37A2B000AE3FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,10 +103,25 @@
 		926CD0B823F38793000AE3FC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		926CD0BA23F387A6000AE3FC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		92749F67242586910061A2FE /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.framework"; sourceTree = "<group>"; };
-		92749F6B242586CC0061A2FE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		92749F6B242586CC0061A2FE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		92B2CC76241088650092CA65 /* InMobiABMoPubPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InMobiABMoPubPlugin.framework; path = "Pods/InMobiABMoPubPlugin/network-support/MoPub/InMobiABMoPubPlugin.framework"; sourceTree = "<group>"; };
 		92B2CC832411BB040092CA65 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		92B2CC842411BB040092CA65 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		92CDF14C2462473D00D13842 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		92DFB94F242D5C41007D728D /* imabmax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imabmax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DFB951242D5C41007D728D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		92DFB952242D5C41007D728D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92DFB954242D5C41007D728D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		92DFB955242D5C41007D728D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		92DFB957242D5C41007D728D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		92DFB958242D5C41007D728D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		92DFB95B242D5C41007D728D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92DFB95D242D5C42007D728D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92DFB960242D5C42007D728D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92DFB962242D5C42007D728D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92DFB963242D5C42007D728D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92DFB968242D5CB2007D728D /* MaxTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxTestViewController.h; sourceTree = "<group>"; };
+		92DFB969242D5CB2007D728D /* MaxTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxTestViewController.m; sourceTree = "<group>"; };
 		92E7E8E22425500400C9622A /* clientSDKMediation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clientSDKMediation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E7E8E42425500400C9622A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92E7E8E52425500400C9622A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,9 +134,10 @@
 		92E7E8F32425500500C9622A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92E7E8F52425500500C9622A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92E7E8F62425500500C9622A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		96D8B3221ECCDC0F1A3C36CE /* libPods-inmobi-sample-app-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-inmobi-sample-app-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03CA50E0322D728C9E87576 /* libPods-imabmopub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-imabmopub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A17A78D4DD8180C60C6B74E0 /* Pods_inmobi_sample_app_objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inmobi_sample_app_objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BEAF31B9E343D8A8EACE1A /* Pods-imabmax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imabmax.release.xcconfig"; path = "Pods/Target Support Files/Pods-imabmax/Pods-imabmax.release.xcconfig"; sourceTree = "<group>"; };
 		DEE919DC366BA3961A381712 /* Pods-inmobi-sample-app-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inmobi-sample-app-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-inmobi-sample-app-objc/Pods-inmobi-sample-app-objc.release.xcconfig"; sourceTree = "<group>"; };
+		E5ADA73D1631828099F0359D /* Pods_clientSDKMediation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clientSDKMediation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28CD0AA2D25BAA0514278A4A /* libPods-inmobi-sample-app-objc.a in Frameworks */,
+				3DC2A6F758BBBD18CDBFA64D /* Pods_inmobi_sample_app_objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,11 +156,19 @@
 				926CD0B923F3879E000AE3FC /* libz.tbd in Frameworks */,
 				92B2CC7D241091400092CA65 /* InMobiMediationSDK.framework in Frameworks */,
 				92B2CC81241091420092CA65 /* WebKit.framework in Frameworks */,
-				83005A02C5A2AECCC8CECCE1 /* libPods-imabmopub.a in Frameworks */,
 				92B2CC7A2410913E0092CA65 /* InMobiABMoPubPlugin.framework in Frameworks */,
 				926CD0BC23F387B5000AE3FC /* libxml2.tbd in Frameworks */,
 				926CD0BB23F387AD000AE3FC /* libsqlite3.0.tbd in Frameworks */,
 				92B2CC7F241091410092CA65 /* InMobiSDK.framework in Frameworks */,
+				3F0C2BB4A2F60621B3E4D09F /* Pods_imabmopub.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DFB94C242D5C41007D728D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179C36B43273366212AA79AF /* Pods_imabmax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +180,8 @@
 				92749F6C242586FD0061A2FE /* WebKit.framework in Frameworks */,
 				92749F6D242587050061A2FE /* libz.tbd in Frameworks */,
 				92749F6E242587150061A2FE /* libsqlite3.0.tbd in Frameworks */,
-				7D76CFE443EAE2F6F28F2590 /* libPods-clientSDKMediation.a in Frameworks */,
 				92749F71242587340061A2FE /* InMobiSDK.framework in Frameworks */,
+				495C332CBCE983A7A3BE74BC /* Pods_clientSDKMediation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +194,7 @@
 				926CD07023F37A2B000AE3FC /* inmobi-sample-app-objc */,
 				926CD08F23F37AA5000AE3FC /* imabmopub */,
 				92E7E8E32425500400C9622A /* clientSDKMediation */,
+				92DFB950242D5C41007D728D /* imabmax */,
 				926CD06F23F37A2B000AE3FC /* Products */,
 				B4C3A4DB5D8D5F7A90957E30 /* Pods */,
 				A3FC5FF348FA33EA899A9F2E /* Frameworks */,
@@ -165,6 +207,7 @@
 				926CD06E23F37A2B000AE3FC /* inmobi-sample-app-objc.app */,
 				926CD08E23F37AA5000AE3FC /* imabmopub.app */,
 				92E7E8E22425500400C9622A /* clientSDKMediation.app */,
+				92DFB94F242D5C41007D728D /* imabmax.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,6 +251,31 @@
 			path = imabmopub;
 			sourceTree = "<group>";
 		};
+		92DFB950242D5C41007D728D /* imabmax */ = {
+			isa = PBXGroup;
+			children = (
+				92DFB951242D5C41007D728D /* AppDelegate.h */,
+				92DFB952242D5C41007D728D /* AppDelegate.m */,
+				92DFB954242D5C41007D728D /* SceneDelegate.h */,
+				92DFB955242D5C41007D728D /* SceneDelegate.m */,
+				92DFB957242D5C41007D728D /* ViewController.h */,
+				92DFB958242D5C41007D728D /* ViewController.m */,
+				92DFB95A242D5C41007D728D /* Main.storyboard */,
+				9209C8FF243D26A200DBB0C3 /* MAxRewardedViewController.h */,
+				9209C900243D26A200DBB0C3 /* MAxRewardedViewController.m */,
+				9209C8FC243D267300DBB0C3 /* MaxTestBannerController.h */,
+				9209C8FD243D267300DBB0C3 /* MaxTestBannerController.m */,
+				92DFB968242D5CB2007D728D /* MaxTestViewController.h */,
+				92DFB969242D5CB2007D728D /* MaxTestViewController.m */,
+				92DFB95D242D5C42007D728D /* Assets.xcassets */,
+				92DFB95F242D5C42007D728D /* LaunchScreen.storyboard */,
+				92DFB962242D5C42007D728D /* Info.plist */,
+				92DFB963242D5C42007D728D /* main.m */,
+				92CDF14C2462473D00D13842 /* Constants.h */,
+			);
+			path = imabmax;
+			sourceTree = "<group>";
+		};
 		92E7E8E32425500400C9622A /* clientSDKMediation */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,9 +307,10 @@
 				926CD0AD23F38769000AE3FC /* INMMoatMobileAppKit.framework */,
 				926CD0AC23F38769000AE3FC /* InMobiMediationSDK.framework */,
 				926CD0AB23F38769000AE3FC /* InMobiSDK.framework */,
-				A03CA50E0322D728C9E87576 /* libPods-imabmopub.a */,
-				96D8B3221ECCDC0F1A3C36CE /* libPods-inmobi-sample-app-objc.a */,
-				48342893AD685D61B6BA0694 /* libPods-clientSDKMediation.a */,
+				E5ADA73D1631828099F0359D /* Pods_clientSDKMediation.framework */,
+				40C26D78B51DDA12A8C6CA55 /* Pods_imabmax.framework */,
+				2B5FACF9DBB47C445AC64EE0 /* Pods_imabmopub.framework */,
+				A17A78D4DD8180C60C6B74E0 /* Pods_inmobi_sample_app_objc.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,6 +324,8 @@
 				DEE919DC366BA3961A381712 /* Pods-inmobi-sample-app-objc.release.xcconfig */,
 				101491C038A1B87625C9DD4A /* Pods-clientSDKMediation.debug.xcconfig */,
 				52E1AFFA0CD39EA81E8AFC70 /* Pods-clientSDKMediation.release.xcconfig */,
+				0E2F4A510BFB1EB5519F1F06 /* Pods-imabmax.debug.xcconfig */,
+				A2BEAF31B9E343D8A8EACE1A /* Pods-imabmax.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -288,7 +359,7 @@
 				926CD08A23F37AA5000AE3FC /* Sources */,
 				926CD08B23F37AA5000AE3FC /* Frameworks */,
 				926CD08C23F37AA5000AE3FC /* Resources */,
-				769E51E0B7BDBA4398F90C38 /* [CP] Copy Pods Resources */,
+				185FDC4C8A8C447E8AC9635D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +370,25 @@
 			productReference = 926CD08E23F37AA5000AE3FC /* imabmopub.app */;
 			productType = "com.apple.product-type.application";
 		};
+		92DFB94E242D5C41007D728D /* imabmax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92DFB967242D5C42007D728D /* Build configuration list for PBXNativeTarget "imabmax" */;
+			buildPhases = (
+				648029620A45F67ABA27D925 /* [CP] Check Pods Manifest.lock */,
+				92DFB94B242D5C41007D728D /* Sources */,
+				92DFB94C242D5C41007D728D /* Frameworks */,
+				92DFB94D242D5C41007D728D /* Resources */,
+				8754F39E73A3B4D055BEA57C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imabmax;
+			productName = imabmax;
+			productReference = 92DFB94F242D5C41007D728D /* imabmax.app */;
+			productType = "com.apple.product-type.application";
+		};
 		92E7E8E12425500400C9622A /* clientSDKMediation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92E7E8FA2425500500C9622A /* Build configuration list for PBXNativeTarget "clientSDKMediation" */;
@@ -307,6 +397,7 @@
 				92E7E8DE2425500400C9622A /* Sources */,
 				92E7E8DF2425500400C9622A /* Frameworks */,
 				92E7E8E02425500400C9622A /* Resources */,
+				1AFC97B855C1B78CDAA6A211 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -332,6 +423,9 @@
 					926CD08D23F37AA5000AE3FC = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
+					92DFB94E242D5C41007D728D = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					92E7E8E12425500400C9622A = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -353,6 +447,7 @@
 				926CD06D23F37A2B000AE3FC /* inmobi-sample-app-objc */,
 				926CD08D23F37AA5000AE3FC /* imabmopub */,
 				92E7E8E12425500400C9622A /* clientSDKMediation */,
+				92DFB94E242D5C41007D728D /* imabmax */,
 			);
 		};
 /* End PBXProject section */
@@ -378,6 +473,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92DFB94D242D5C41007D728D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DFB961242D5C42007D728D /* LaunchScreen.storyboard in Resources */,
+				92DFB95E242D5C42007D728D /* Assets.xcassets in Resources */,
+				92DFB95C242D5C41007D728D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E7E8E02425500400C9622A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -391,6 +496,64 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		185FDC4C8A8C447E8AC9635D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-imabmopub/Pods-imabmopub-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/mopub-ios-sdk/MoPub.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MoPub.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imabmopub/Pods-imabmopub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1AFC97B855C1B78CDAA6A211 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-clientSDKMediation/Pods-clientSDKMediation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-clientSDKMediation/Pods-clientSDKMediation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		648029620A45F67ABA27D925 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-imabmax-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7160FB8C1E056667A9CDCC7E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,60 +590,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		769E51E0B7BDBA4398F90C38 /* [CP] Copy Pods Resources */ = {
+		8754F39E73A3B4D055BEA57C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-imabmopub/Pods-imabmopub-resources.sh",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPMutedBtn.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPMutedBtn@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPMutedBtn@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPPlayBtn.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPPlayBtn@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPPlayBtn@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MRAID.bundle",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPAdapters.plist",
+				"${SRCROOT}/Pods/Target Support Files/Pods-imabmax/Pods-imabmax-resources.sh",
+				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-6.12.4/AppLovinSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MRAID.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPAdapters.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppLovinSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imabmopub/Pods-imabmopub-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imabmax/Pods-imabmax-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA7EA5DD090B104E02A0CCD5 /* [CP] Check Pods Manifest.lock */ = {
@@ -527,6 +652,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92DFB94B242D5C41007D728D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9209C901243D26A200DBB0C3 /* MAxRewardedViewController.m in Sources */,
+				9209C8FE243D267300DBB0C3 /* MaxTestBannerController.m in Sources */,
+				92DFB96A242D5CB2007D728D /* MaxTestViewController.m in Sources */,
+				92DFB959242D5C41007D728D /* ViewController.m in Sources */,
+				92DFB953242D5C41007D728D /* AppDelegate.m in Sources */,
+				92DFB964242D5C42007D728D /* main.m in Sources */,
+				92DFB956242D5C41007D728D /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E7E8DE2425500400C9622A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -569,6 +708,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				926CD09F23F37AA6000AE3FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		92DFB95A242D5C41007D728D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92DFB95B242D5C41007D728D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92DFB95F242D5C42007D728D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92DFB960242D5C42007D728D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -784,6 +939,46 @@
 			};
 			name = Release;
 		};
+		92DFB965242D5C42007D728D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E2F4A510BFB1EB5519F1F06 /* Pods-imabmax.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZMMZ9FP6W;
+				INFOPLIST_FILE = imabmax/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inmobise.imabmax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92DFB966242D5C42007D728D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2BEAF31B9E343D8A8EACE1A /* Pods-imabmax.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZMMZ9FP6W;
+				INFOPLIST_FILE = imabmax/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inmobise.imabmax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		92E7E8F82425500500C9622A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 101491C038A1B87625C9DD4A /* Pods-clientSDKMediation.debug.xcconfig */;
@@ -856,6 +1051,15 @@
 			buildConfigurations = (
 				926CD0A523F37AA6000AE3FC /* Debug */,
 				926CD0A623F37AA6000AE3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92DFB967242D5C42007D728D /* Build configuration list for PBXNativeTarget "imabmax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DFB965242D5C42007D728D /* Debug */,
+				92DFB966242D5C42007D728D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
