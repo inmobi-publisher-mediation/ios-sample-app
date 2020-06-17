@@ -50,7 +50,7 @@
 		92DFB96A242D5CB2007D728D /* MaxTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DFB969242D5CB2007D728D /* MaxTestViewController.m */; };
 		92E7E8E62425500400C9622A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7E8E52425500400C9622A /* AppDelegate.m */; };
 		92E7E8E92425500400C9622A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7E8E82425500400C9622A /* SceneDelegate.m */; };
-		92E7E8EC2425500400C9622A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7E8EB2425500400C9622A /* ViewController.m */; };
+		92E7E8EC2425500400C9622A /* MediationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7E8EB2425500400C9622A /* MediationVC.m */; };
 		92E7E8EF2425500400C9622A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E7E8ED2425500400C9622A /* Main.storyboard */; };
 		92E7E8F12425500500C9622A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E7E8F02425500500C9622A /* Assets.xcassets */; };
 		92E7E8F42425500500C9622A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E7E8F22425500500C9622A /* LaunchScreen.storyboard */; };
@@ -127,8 +127,8 @@
 		92E7E8E52425500400C9622A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		92E7E8E72425500400C9622A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		92E7E8E82425500400C9622A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		92E7E8EA2425500400C9622A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		92E7E8EB2425500400C9622A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		92E7E8EA2425500400C9622A /* MediationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediationVC.h; sourceTree = "<group>"; };
+		92E7E8EB2425500400C9622A /* MediationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediationVC.m; sourceTree = "<group>"; };
 		92E7E8EE2425500400C9622A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92E7E8F02425500500C9622A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92E7E8F32425500500C9622A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -283,8 +283,8 @@
 				92E7E8E52425500400C9622A /* AppDelegate.m */,
 				92E7E8E72425500400C9622A /* SceneDelegate.h */,
 				92E7E8E82425500400C9622A /* SceneDelegate.m */,
-				92E7E8EA2425500400C9622A /* ViewController.h */,
-				92E7E8EB2425500400C9622A /* ViewController.m */,
+				92E7E8EA2425500400C9622A /* MediationVC.h */,
+				92E7E8EB2425500400C9622A /* MediationVC.m */,
 				92E7E8ED2425500400C9622A /* Main.storyboard */,
 				92E7E8F02425500500C9622A /* Assets.xcassets */,
 				92E7E8F22425500500C9622A /* LaunchScreen.storyboard */,
@@ -521,12 +521,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-clientSDKMediation/Pods-clientSDKMediation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -597,7 +599,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-imabmax/Pods-imabmax-resources.sh",
-				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-6.12.4/AppLovinSDKResources.bundle",
+				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-6.12.8/AppLovinSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -670,7 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E7E8EC2425500400C9622A /* ViewController.m in Sources */,
+				92E7E8EC2425500400C9622A /* MediationVC.m in Sources */,
 				92E7E8E62425500400C9622A /* AppDelegate.m in Sources */,
 				92E7E8F72425500500C9622A /* main.m in Sources */,
 				92E7E8E92425500400C9622A /* SceneDelegate.m in Sources */,

@@ -19,7 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [AerServSDK initializeWithAppID:@"1022221" andUserConsent:nil];
+    // 1022221 -personal
+    // 1021436 -mcg
+    
+    [AerServSDK initializeWithAppID:@"1022221" andCompletionHandler:nil];
+//    [AerServSDK setGDPRWithUserConsent:<#(nullable NSDictionary *)#>
 
     
     return YES;

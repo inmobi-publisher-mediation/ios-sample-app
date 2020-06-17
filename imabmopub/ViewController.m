@@ -33,6 +33,8 @@
 
 }
 
+- (IBAction)test:(id)sender {
+}
 
 @end
 

@@ -20,6 +20,7 @@ target 'imabmax' do
 end
 
 target 'clientSDKMediation' do
+  pod 'FBAudienceNetwork'
   pod 'Google-Mobile-Ads-SDK'
   pod 'InMobiMediationSDK'
 end

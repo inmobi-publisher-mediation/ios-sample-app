@@ -41,6 +41,10 @@
     // Get and return IDFA
     return nil;
 }
+- (IBAction)loadBannerAd:(id)sender {
+}
+- (IBAction)loadBannerTest:(id)sender {
+}
 
 - (IBAction) myUnwindAction:(UIStoryboardSegue*)unwindSegue {
  
