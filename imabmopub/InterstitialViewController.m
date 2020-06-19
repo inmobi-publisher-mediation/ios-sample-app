@@ -52,7 +52,7 @@
     
 }
 
-- (void)bidRecievedFor:(nullable id)mpAd andInMobiAd:(nonnull id)imAd withTransactionInfo:(nonnull NSString *)keyword {
+- (void)bidReceivedFor:(id)mpAd andInMobiAd:(id)imAd withTransactionInfo:(NSString *)keyword{
         
     NSLog(@"IMAudienceBidder - bidRecievedFor withTransactionInfo: %@", keyword);
     

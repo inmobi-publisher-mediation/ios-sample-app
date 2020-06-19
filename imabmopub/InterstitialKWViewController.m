@@ -60,7 +60,7 @@
     
 }
 
-- (void)bidRecievedFor:(nullable id)mpAd andInMobiAd:(nonnull id)imAd withTransactionInfo:(nonnull NSString *)keyword {
+- (void)bidReceivedFor:(id)mpAd andInMobiAd:(id)imAd withTransactionInfo:(NSString *)keyword {
         
     NSLog(@"IMAudienceBidder - bidRecievedFor withTransactionInfo: %@", keyword);
     
@@ -68,21 +68,14 @@
       if (![extras isKindOfClass:[NSMutableDictionary class]]) {
           extras = [NSMutableDictionary new];
       }
-      IMFacadeObjectHolder* facadeObject = [[IMFacadeObjectHolder alloc]
-          initWithMoPubObject:self.mpInterstitial andInMobiObject:imAd];
-      extras[kIMABInMobiObjectKey] = facadeObject;
-    
-      self.mpInterstitial.localExtras = [NSDictionary dictionaryWithDictionary:extras];
-      //save keyword in mopub object
-      NSString* keywords = self.mpInterstitial.keywords;
-    
-      self.mpInterstitial.keywords = [self processMoPubKeywords:keywords byAppendingInMobiBid:keyword];
-      [self.mpInterstitial loadAd];
     
     
-    // Once all of your remaining header bidders have returned, you can call loadAd.
+    IMFacadeWrapper* facadeWrapper = [[IMFacadeWrapper alloc] initWithMoPubObject:self.mpInterstitial andInMobiObject:self.interstitialKWAd];
+    self.mpInterstitial.localExtras=@{kIMABInMobiObjectKey: facadeWrapper};
+    [self.mpInterstitial setKeywords:keyword];
+    
 
-    
+    // Once all of your remaining header bidders have returned, you can call loadAd.
     [self.mpInterstitial loadAd];
 }
 

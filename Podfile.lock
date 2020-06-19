@@ -2,10 +2,10 @@ PODS:
   - AppLovinMediationInMobiAdapter (9.0.7.1):
     - AppLovinSDK
     - InMobiSDK/Core (= 9.0.7)
-  - AppLovinSDK (6.12.7)
-  - Google-Mobile-Ads-SDK (7.60.0):
+  - AppLovinSDK (6.12.8)
+  - Google-Mobile-Ads-SDK (7.61.0):
     - GoogleAppMeasurement (~> 6.0)
-  - GoogleAppMeasurement (6.5.1):
+  - GoogleAppMeasurement (6.6.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
     - GoogleUtilities/Network (~> 6.0)
@@ -36,28 +36,31 @@ PODS:
     - InMobiMediationSDK/Moat
   - InMobiMediationSDK/Moat (9.0.7):
     - InMobiMediationSDK/Core
-  - InMobiMoPubPlugin (9.0.7.0)
+  - InMobiMoPubPlugin (9.0.7.1):
+    - InMobiSDK/Core
+    - mopub-ios-sdk/Core
+    - mopub-ios-sdk/NativeAds
   - InMobiSDK/Core (9.0.7)
-  - mopub-ios-sdk (5.12.1):
-    - mopub-ios-sdk/MoPubSDK (= 5.12.1)
-  - mopub-ios-sdk/Avid (5.12.1):
+  - mopub-ios-sdk (5.12.0):
+    - mopub-ios-sdk/MoPubSDK (= 5.12.0)
+  - mopub-ios-sdk/Avid (5.12.0):
     - mopub-ios-sdk/Core
-  - mopub-ios-sdk/Core (5.12.1)
-  - mopub-ios-sdk/Moat (5.12.1):
+  - mopub-ios-sdk/Core (5.12.0)
+  - mopub-ios-sdk/Moat (5.12.0):
     - mopub-ios-sdk/Core
-  - mopub-ios-sdk/MoPubSDK (5.12.1):
+  - mopub-ios-sdk/MoPubSDK (5.12.0):
     - mopub-ios-sdk/Avid
     - mopub-ios-sdk/Core
     - mopub-ios-sdk/Moat
     - mopub-ios-sdk/NativeAds
-  - mopub-ios-sdk/NativeAds (5.12.1):
+  - mopub-ios-sdk/NativeAds (5.12.0):
     - mopub-ios-sdk/Core
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
-  - PromisesObjC (1.2.8)
+  - PromisesObjC (1.2.9)
 
 DEPENDENCIES:
   - AppLovinMediationInMobiAdapter
@@ -65,7 +68,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - InMobiMediationSDK
   - InMobiMoPubPlugin
-  - mopub-ios-sdk
+  - mopub-ios-sdk (= 5.12)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -83,17 +86,17 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppLovinMediationInMobiAdapter: bf14632304acc221c9e84cff61619340d07909f0
-  AppLovinSDK: bf26cc47c7ede7b021d2d0d2a1fc3558d283c91c
-  Google-Mobile-Ads-SDK: d70efb31e7ea19fe99d466dc5d4788966b6914f8
-  GoogleAppMeasurement: 137afe68bfa406c3f4221b9395253d9e5d4654cf
+  AppLovinSDK: 0699feee7a8a3e55dc3a52e07d1b51cae0d27d56
+  Google-Mobile-Ads-SDK: 4c3b24b04293b4bb370b2cb392cdd3ee97c87752
+  GoogleAppMeasurement: 2fd5c5a56c069db635c8e7b92d4809a9591d0a69
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   InMobiMediationSDK: 479cf2ae4e182150c07e1639f5337854d8c48b90
-  InMobiMoPubPlugin: 024bf8735ed7076edcf7a827dad7e19310939a55
+  InMobiMoPubPlugin: 20baa1e07354389490cba73cc9a980bfe5a5865f
   InMobiSDK: c3ec3fed998d8431ba31ad16565d102159e3f9e3
-  mopub-ios-sdk: d1640225b34ad74700e2acddb116cac634fc45d8
+  mopub-ios-sdk: bb61d5741ba16c6a78e5a54e37bc60ef8c9a80a8
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
-  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
 
-PODFILE CHECKSUM: d5392aa22aafabfa36b930948adbba6dac5a37f4
+PODFILE CHECKSUM: 6294ff5e0f87ac1e95a7257c608ac27d3e100632
 
 COCOAPODS: 1.5.3

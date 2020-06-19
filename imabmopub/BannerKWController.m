@@ -30,7 +30,6 @@
 
 - (IBAction)makeBannerBid:(id)sender {
     self.bannerKWLoaded = false;
-
     [self createBidForBidType:0];
     [self submitBidFor320x50Banner];
 }
@@ -38,7 +37,6 @@
 
 - (IBAction)makeMrecBid:(id)sender {
     self.bannerKWLoaded = false;
-
     [self createBidForBidType:1];
     [self submitBidForMRECBanner];
 }
@@ -50,21 +48,19 @@
 
 - (void) createBidForBidType:(NSInteger)type {
     
-
-    
     switch (type) {
         case 1: {
             self.IMBannerBid = [[IMABMoPubBanner alloc]
-                                 initWithFrame:CGRectMake(0,0, 300, 250)
-                                 placementId:kIMMRECID
-                                delegate:self];
+                                initWithSize: CGSizeMake(300, 250)
+                                placementId: kIMMRECID
+                                delegate: self];
             break;
         }
         default: {
             self.IMBannerBid = [[IMABMoPubBanner alloc]
-                                initWithFrame:CGRectMake(0, 0, 320, 50)
-                                placementId:kIMBannerID
-                                delegate:self];
+                                initWithSize: CGSizeMake(330, 50)
+                                placementId: kIMBannerID
+                                delegate: self];
         }
 
     }
@@ -83,7 +79,6 @@
     
     [self configureBannerForPlacementID:kMPBannerID
                                 andSize:MOPUB_BANNER_SIZE];
-      
     [self.IMBannerBid requestBid:self timeout:kBidTimeout];
 }
 
@@ -98,13 +93,9 @@
     
     NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - submitMRECKWBid"]);
     self.isLoadingMrec = true;
-
-    
+    [self.IMBannerBid requestBid:self timeout:kBidTimeout];
     [self configureBannerForPlacementID:kMPMRECID
                                 andSize:MOPUB_MEDIUM_RECT_SIZE];
-    
-      
-    [self.IMBannerBid requestBid:self timeout:kBidTimeout];
     
 }
 
@@ -112,7 +103,6 @@
 - (void) cleanupBanner {
     self.isLoadingMrec = false;
     self.bannerKWLoaded = false;
-    
     // TODO: Additional cleanup here
 }
 
@@ -129,7 +119,6 @@
     [self.adView startAutomaticallyRefreshingContents];
     
     self.adView.delegate = self;
-
 }
 
 
@@ -148,8 +137,7 @@
           // [self submitBidForMRECBanner]; // MREC does not refresh
       }
      else {
-         [self createBidForBidType:0];
-          [self submitBidFor320x50Banner];
+      [self.IMBannerBid requestBid:self timeout:kBidTimeout];
       }
     
 }
@@ -165,8 +153,7 @@
         // [self submitBidForMRECBanner]; // MREC does not refresh
     }
     else {
-        [self createBidForBidType:0];
-        [self submitBidFor320x50Banner];
+        [self.IMBannerBid requestBid:self timeout:kBidTimeout];
     }
     
 }
@@ -188,25 +175,20 @@
     
 }
 
-- (void)bidRecievedFor:(nullable id)mpAd andInMobiAd:(nonnull id)imAd withTransactionInfo:(nonnull NSString *)keyword {
+
+
+- (void)bidReceivedFor:(id)mpAd andInMobiAd:(id)imAd withTransactionInfo:(NSString *)keyword {
     
     NSLog(@"IMAudienceBidder - bidRecievedFor withTransactionInfo: %@", keyword);
     
-    NSMutableDictionary* extras = [self.adView.localExtras mutableCopy];
-    
-    if (![extras isKindOfClass:[NSMutableDictionary class]]) {
-        extras = [NSMutableDictionary new];
-    }
-    
-    IMFacadeObjectHolder* facadeObject = [[IMFacadeObjectHolder alloc] initWithMoPubObject:self.adView andInMobiObject:imAd];
-    
-    extras[kIMABInMobiObjectKey] = facadeObject;
-    self.adView.localExtras = [NSDictionary dictionaryWithDictionary:extras];
+    // Create a facade wrapper, provide mopub ad view / banner view
     
     
+    IMFacadeWrapper* facadeWrapper = [[IMFacadeWrapper alloc] initWithMoPubObject:self.adView andInMobiObject:imAd];
+    self.adView.localExtras = @{kIMABInMobiObjectKey : facadeWrapper};
     
-    NSString* keywords = self.adView.keywords;
-    self.adView.keywords = [self processMoPubKeywords:keywords byAppendingInMobiBid:keyword];
+
+    [self.adView setKeywords:keyword];
     
     if (!self.bannerKWLoaded){
         [self.view addSubview:self.adView];
@@ -215,17 +197,6 @@
     
     
 }
-
-
-- (NSString*)processMoPubKeywords:(NSString*)keyword byAppendingInMobiBid:(NSString*)bid {
-    if (!keyword) {
-        keyword = bid;
-    } else {
-        keyword = [NSString stringWithFormat:@"%@,%@", keyword, bid];
-    }
-    return keyword;
-}
-
 
 
 
